@@ -14,6 +14,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "
         Set-ItemProperty -Path \$regPath -Name ProxyEnable -Value 1
         Write-Host '========================================'
         Write-Host ' Proxy Control ID: ATIVADO com sucesso! '
+        Write-Host ' IP do Proxy : $PROXY_SERVER '
         Write-Host '========================================'
     } else {
         # Desativa o Proxy
