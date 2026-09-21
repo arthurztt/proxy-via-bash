@@ -12,16 +12,17 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "
         # Ativa o Proxy e define o IP/Porta
         Set-ItemProperty -Path \$regPath -Name ProxyServer -Value '$PROXY_SERVER'
         Set-ItemProperty -Path \$regPath -Name ProxyEnable -Value 1
-        Write-Host '========================================'
-        Write-Host ' Proxy Control ID: ATIVADO com sucesso! '
-        Write-Host ' IP do Proxy : $PROXY_SERVER '
-        Write-Host '========================================'
+        Write-Host '______________________________________________'
+        Write-Host '     Proxy Control ID: ATIVADO com sucesso! '
+        Write-Host '     IP do Proxy : $PROXY_SERVER '
+        Write-Host '______________________________________________'
+        Write-Host '     AVISO : Para desativar o Proxy, basta apertar no Icone na Área de Trabalho novamente (AtivarProxy)!   '
     } else {
         # Desativa o Proxy
         Set-ItemProperty -Path \$regPath -Name ProxyEnable -Value 0
-        Write-Host '========================================'
+        Write-Host '______________________________________________'
         Write-Host ' Proxy Control ID: DESATIVADO!          '
-        Write-Host '========================================'
+        Write-Host '______________________________________________'
     }
 
     # Força a atualização da interface do Windows e navegadores sem reiniciar
